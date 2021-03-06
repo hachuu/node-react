@@ -1,6 +1,6 @@
 const express = require('express');
-const app = express()
-const port = 5000
+const app = express();
+const port = 5000;
 
 const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://hachu:abcd1234@boilerplate.grxyf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
@@ -9,8 +9,8 @@ mongoose.connect('mongodb+srv://hachu:abcd1234@boilerplate.grxyf.mongodb.net/myF
   useCreateIndex: true,
   useFindAndModify: false
 }).then(() => console.log('MongoDB connected...'))
-.catch(err => console.log(err))
+.catch(err => console.log(err));
 
 app.get('/', (req, res) => res.send('Hello World'));
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
